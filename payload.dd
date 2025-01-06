@@ -1,0 +1,318 @@
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 500
+STRING ("CONGRATULATIONS! YOU HAVE BEEN HACKED")
+ENTER
+
+REM Open PowerShell
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+
+REM Set PowerShell window to fullscreen and clear screen
+STRING mode con: cols=120 lines=40
+ENTER
+DELAY 500
+STRING 10
+ENTER
+DELAY 500
+STRING 9
+ENTER
+DELAY 500
+STRING 8
+ENTER
+DELAY 500
+STRING 7
+ENTER
+DELAY 500
+STRING 6
+ENTER
+DELAY 500
+STRING 5
+ENTER
+DELAY 500
+STRING 4
+ENTER
+DELAY 500
+STRING 3
+ENTER
+DELAY 500
+STRING 2
+ENTER
+DELAY 500
+STRING 1
+ENTER
+DELAY 500
+ENTER
+
+DELAY 500
+ALT F4
+DELAY 500
+ENTER
+
+
+
+
+
+
+
+
+
+
+REM Scary Hacked Simulation Payload
+DELAY 1500
+REM Open Command Prompt (Windows)
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 1000
+REM Make the Command Prompt Fullscreen
+STRING mode 1000
+ENTER
+DELAY 500
+REM Change text color to green
+STRING color 0a
+ENTER
+DELAY 500
+REM Display scary messages and Matrix effect
+STRING cls
+ENTER
+STRING echo You have been hacked!
+ENTER
+STRING timeout /nobreak /t 2 >nul
+ENTER
+STRING echo Fetching your data...
+ENTER
+STRING timeout /nobreak /t 2 >nul
+ENTER
+STRING echo Do not try to close this window.
+ENTER
+STRING timeout /nobreak /t 2 >nul
+ENTER
+STRING :matrix
+ENTER
+STRING echo %random%%random%%random%%random%%random% HACKED %random%%random%%random%%random%%random%
+ENTER
+STRING timeout /nobreak /t 1 >nul
+ENTER
+STRING echo Data extraction: %random%%random%%random%%random%%random%%
+ENTER
+STRING timeout /nobreak /t 1 >nul
+ENTER
+STRING goto matrix
+ENTER
+
+
+
+
+
+
+
+
+
+REM Custom Locker with Quiz
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 500
+
+REM Create the batch file for the locker
+STRING echo off > %TEMP%\locker.bat && echo cls >> %TEMP%\locker.bat && echo echo Welcome to the Custom Locker! >> %TEMP%\locker.bat
+ENTER
+STRING echo echo Solve this question to unlock: >> %TEMP%\locker.bat && echo echo What is 5 + 3? >> %TEMP%\locker.bat
+ENTER
+STRING echo set /p answer=Answer: >> %TEMP%\locker.bat && echo if "%answer%"=="8" ( >> %TEMP%\locker.bat
+ENTER
+STRING echo start https://www.youtube.com/watch?v=JLI4YyAuxLU >> %TEMP%\locker.bat && echo exit >> %TEMP%\locker.bat && echo ) else ( >> %TEMP%\locker.bat
+ENTER
+STRING echo echo Wrong answer! Try again. >> %TEMP%\locker.bat && echo pause >> %TEMP%\locker.bat && echo start %TEMP%\locker.bat >> %TEMP%\locker.bat
+ENTER
+STRING echo ) >> %TEMP%\locker.bat
+ENTER
+
+REM Execute the batch file
+STRING start %TEMP%\locker.bat
+ENTER
+
+REM Hide the command prompt
+STRING exit
+ENTER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+REM Educational File Listing Payload - Refined
+DELAY 20000
+REM Open PowerShell
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+REM Ensure the PowerShell window is focused and ready
+STRING Start-Sleep -Seconds 2
+ENTER
+REM List files and save to Desktop
+STRING Get-ChildItem -Path "$env:USERPROFILE\Documents" -Recurse | Out-File "$env:USERPROFILE\Desktop\file_list.txt"
+ENTER
+REM Notify user of completion
+STRING Write-Host "File listing complete. Check Desktop for file_list.txt"
+ENTER
+STRING Start-Sleep -Seconds 5
+ENTER
+REM Close PowerShell
+STRING exit
+ENTER
+
+
+
+
+REM Collect System IP Address - Educational Example
+DELAY 1000
+REM Open PowerShell
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+REM Define output file location
+STRING $outputFile = "$env:USERPROFILE\Desktop\IP_Info.txt"
+ENTER
+REM Get system IP information
+STRING Get-NetIPAddress | Out-File -FilePath $outputFile
+ENTER
+REM Notify the user
+STRING Write-Host "IP address information has been saved to Desktop (IP_Info.txt)."
+ENTER
+REM Pause for 5 seconds to allow user to see message
+STRING Start-Sleep -Seconds 5
+ENTER
+REM Close PowerShell
+STRING exit
+ENTER
+
+
+
+REM Simulated Data Fetch Message Script (No Restart)
+DELAY 1000
+REM Open Notepad to display the message
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 1000
+REM Write the message to Notepad
+STRING We have successfully fetched your data and IP details.\n
+DELAY 500
+STRING Thank you for your time. Goodbye!\n
+DELAY 500
+STRING We hope that this is the most beautiful moment of your life.\n
+DELAY 500
+STRING Your system will now restart.
+ENTER
+DELAY 1000
+REM Pause to allow the user to read the message
+DELAY 5000
+REM Close Notepad
+ALT F4
+DELAY 500
+STRING n
+ENTER
+
+
+
+
+
+
+
+
+DELAY 1000
+REM Open Command Prompt (Windows Key + R, then type cmd)
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 1000
+REM Use the start command to open YouTube video in the default browser
+STRING start https://www.youtube.com/watch?v=XcxcUApTZ7Q
+DELAY 500
+ENTER
+DELAY 1000
+REM Exit Command Prompt
+STRING exit
+ENTER
+
+
+
+
+
+
+
+
+
+
+
+
+REM Title: Fake Update Screen Payload
+REM Description: Locks the computer and displays a fake update screen
+
+DELAY 50000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+CTRL-SHIFT ENTER
+DELAY 500
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+
+REM Lock Computer
+STRING powershell -nop -c "rundll32.exe user32.dll, LockWorkStation"
+ENTER
+DELAY 1000
+
+REM Display Fake Update Screen
+STRING powershell -nop -c "$path = 'C:\temp\fakeupdate.html'; $html = @'<html><head><meta http-equiv=\"refresh\" content=\"0;url=https://fakeupdates.net/?win10\"></head></html>'; $html | Out-File $path; Start-Process 'explorer.exe' -ArgumentList $path -WindowStyle Maximized"
+ENTER
+DELAY 1000
+Lock Computer and Display Fake Update Screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
